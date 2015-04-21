@@ -1,44 +1,69 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>AP010</title>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <title>AP010 - Transit Management and Performance Committee</title>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body>
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
 
-    <div class="hero-unit">
-      <h1>'Sup</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML Template</li>
-        <li>Normalize CSS</li>
-        <li>Sass</li>
-        <li>Bourbon & Neat</li>
-        <li>UnderscoreJS</li>
-      </ul>
-      <p>Don't forget to update your readme file.</p>
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+<body ng-app='Committee'>
+  <div class='container'>
+    <div class='header'>
+      <a href='#/'><h1>AP010 - Transit Management and Performance Committee</h1></a>
+      <h2>A committee of the Transportation Research Board</h2>
+    </div>
+
+    <div class='navigation'>
+      <a href='#/about'><button>About the Committee</button></a>
+      <a href='#/members'><button>Portfolio of Online Projects</button></a>
+      <a href='#/resources'><button>Committee Resources</button></a>
+    </div>
+
+    <div ng-view class='main'>
+    </div>
+
+      <!-- <div class='footer'>
+        <ul class='links'>
+          <li><a href='http://en.wikipedia.org/wiki/PRISM_(surveillance_program)'>Privacy Policy</a></li>
+          <li><a href='https://tosdr.org/'>Terms of Service</a></li>
+          <li><a href='http://www.fta.dot.gov'>Federal Transit Administration</a></li>
+          <li><a href='http://www.google.com'>Help</a></li>
+          <li><a href='http://www.peachpundit.com'>Blog</a></li>
+        </ul>
+      </div> -->
     </div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src='../bower_components/ng-underscore/build/ng-underscore.min.js'></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-</body>
-</html>
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <script src='scripts/controllers/main_controller.js'></script>
+    <script src='scripts/controllers/portfolio_controller.js'></script>
+    <script src='scripts/controllers/other_controller.js'></script>
+    <!-- endbuild -->
+  </body>
+  </html>

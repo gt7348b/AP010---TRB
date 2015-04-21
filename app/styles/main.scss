@@ -1,4 +1,4 @@
- // Bourbon & Neat
+// Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
@@ -9,18 +9,154 @@ body {
   color: #333;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.container{
+  @include outer-container;
+  max-width: none;
+  $medium: new-breakpoint(max-width 750px 12);
+  $mobile: new-breakpoint(max-width 600px 6);
+
+  .header{
+    color: gray;
+    text-align: center;
+    background-color: hsl(215,66,15);
+    opacity: 0.7;
+    background-image: url ('images/DSC02302.JPG');
+    @include padding (1em 0 1em 0);
+
+    li{
+      display: inline-block;
+    }
+
+    a {
+      text-decoration: none;
+      @include padding(0 1em 0 1em);
+      color: white;
+    }
+
+    h2 {
+      color: gray;
+      font-style: italic;
+    }
   }
+
+  .footer {
+    background-color: white;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        @include padding (0.5em 0.5em 0.5em 0.5em);
+
+        a {
+          text-decoration: none;
+          color: gray;
+          padding: none;
+        }
+      }
+    } // This closes out the ul
+  } //This closes out the footer
+
+  .navigation {
+    //@include span-column(3);
+    text-align: center;
+
+    button {
+      margin-top: 1em;
+      color: white;
+      border-radius: .3em;
+      background-color: #776666;
+
+    }
+  }
+
+  .main {
+    //@include span-column(9);
+    margin: 50px auto 0 auto;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 60px;
+
+    h1 {
+      font-size: 4em;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    button {
+      color: black;
+      font-weight: bold;
+      border-radius: .3em;
+    }
+
+    img {
+      width: 5em;
+      height: auto;
+      border-radius: 1em;
+
+    }
+
+    .title_img{
+
+      img{
+        width: 3em;
+        height: auto;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-style: italic;
+    }
+
+    .project {
+      border-style: solid;
+      border-radius: 1.5em;
+      @include margin (2em null null null);
+
+      .proleft{
+        @include padding(1em 1em 1em 1em);
+
+        a {
+          font-family: $lucida-grande;
+          font-style: italic;
+          color: #6092b5;
+        }
+      }
+
+      .exp{
+        @include padding(1em 1em 1em 1em);
+
+        a {
+          font-family: $lucida-grande;
+          font-style: italic;
+          color: #6092b5;
+        }
+      }
+    }
+
+    .library_title {
+      border-style: solid;
+      border-radius: 1.5em;
+      @include margin (2em null null null);
+    }
+  }
+
+  //This is for the images
+  .Foot{
+
+    ul{
+      list-style-type: none;
+
+        li{
+          display: inline-block;
+          transform: rotate(90deg);
+        }
+      }
+    }
 }
