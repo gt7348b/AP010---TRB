@@ -2,7 +2,7 @@ console.log('Roscoe plays peekaboo');
 
 (function(){
 
-  angular.module('Portfolio', ['ngResource', 'ngRoute'])
+  angular.module('Committee', ['ngResource', 'ngRoute'])
 
   .config(function($routeProvider){
 
